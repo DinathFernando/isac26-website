@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b09">
+  <meta name="description" content="ISAC’26 rules and regulations. Read the official participation requirements before entering.">
+  <title>Rules &amp; Regulations | ISAC’26</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">𓂀</span><span class="brand-name">ISAC<span>’26</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html#about">About</a><a href="index.html#competitions">Competitions</a><a href="rules.html">Rules &amp; Regulations</a><a href="index.html#contact">Contact</a>
+      <a class="nav-register" href="index.html#home">Return to home ↗</a>
+    </nav>
+  </header>
+  <main class="section-wrap">
+    <section class="rules-hero">
+      <div class="section-kicker">THE INSCRIPTIONS</div>
+      <h1>Rules &amp;<br><em>Regulations.</em></h1>
+      <p>Every arena has its code. Read the official requirements carefully before preparing or submitting an entry to ISAC’26.</p>
+    </section>
+    <section class="rules-content">
+      <div class="section-kicker">PLEASE READ BEFORE ENTERING</div>
+      <h2>1. Eligibility</h2>
+      <ul>
+        <li>ISAC’26 is intended for eligible school students representing their schools, subject to the final eligibility criteria published by the organisers.</li>
+        <li>Contestants must select categories and age or school-level divisions for which they qualify.</li>
+        <li>School approval or verification may be required during registration.</li>
+      </ul>
+      <h2>2. Registration</h2>
+      <ul>
+        <li>Contestants must submit complete and accurate information through the official registration method announced by the organisers.</li>
+        <li>Each contestant is responsible for checking the category requirements, deadlines, formats, and submission instructions.</li>
+        <li>Do not submit passwords, payment information, or other sensitive details through unofficial links.</li>
+      </ul>
+      <h2>3. Originality and conduct</h2>
+      <ul>
+        <li>Entries must be the contestant’s own work unless a category’s published rules explicitly state otherwise.</li>
+        <li>Plagiarism, impersonation, fabricated credentials, or unauthorised use of another person’s work may result in disqualification.</li>
+        <li>Contestants must behave respectfully toward judges, organisers, other contestants, and participating schools.</li>
+      </ul>
+      <h2>4. Submission requirements</h2>
+      <ul>
+        <li>Follow the file format, duration, language, naming convention, and delivery method specified for each category.</li>
+        <li>Late, incomplete, corrupted, or incorrectly formatted submissions may not be accepted.</li>
+        <li>Keep a copy of your final submission until the competition concludes.</li>
+      </ul>
+      <h2>5. Judging and decisions</h2>
+      <ul>
+        <li>Entries will be evaluated against the criteria announced for their respective categories.</li>
+        <li>The organisers may request clarification or verification where necessary.</li>
+        <li>Decisions and procedures will follow the final rules issued by the ISAC’26 organising committee.</li>
+      </ul>
+      <h2>6. Media and publication</h2>
+      <ul>
+        <li>Where applicable, contestants and schools should ensure that they have permission to submit and publish any included third-party material.</li>
+        <li>Any use of contestant names, photographs, recordings, or submitted work for event coverage must follow the permissions and privacy terms communicated by the organisers.</li>
+      </ul>
+      <div class="rules-warning"><strong>Important:</strong> This page is a starter template, not a substitute for the official ISAC’26 rulebook. The organising committee must review, approve, and replace or amend these clauses before publication. Category-specific details, deadlines, age divisions, judging criteria, and submission limits have deliberately not been invented here.</div>
+      <div class="hero-actions"><a class="button button-gold" href="index.html#competitions">Explore competitions ↗</a><a class="button button-outline" href="index.html">Back to home</a></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">ISAC<span>’26</span></a>
+    <p>Organised by the Ananda College Broadcasting Unit</p>
+    <a href="#" class="back-top">BACK TO TOP ↑</a>
+    <small>© <span id="year"></span> ISAC’26. All rights reserved.</small>
+  </footer>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
